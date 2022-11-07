@@ -13,14 +13,14 @@ class Product < ActiveRecord::Base
  end
 
  def average_rating
-  all_ratings = []
-  Review.all.map do |rev|
-   all_ratings << rev.star_rating
-  end
+  # all_ratings = []
+  # Review.all.map do |rev|
+  #  all_ratings << rev.star_rating
+  # end
 
-  all_ratings.sum.to_f/all_ratings.count
+  # all_ratings.sum.to_f/all_ratings.count
 
-  # self.reviews.average(:star_rating).to_fexit
+  self.reviews.average(:star_rating).to_f
   
  end
 
